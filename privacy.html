@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Informacja o prywatności integracji Librus powiadomienia." />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>Polityka prywatności — Librus powiadomienia</title>
+    <style>
+      :root { color-scheme: light; --ink: #252b27; --muted: #5c665f; --line: #d9ded7; --accent: #526d42; --paper: #f5f3ed; --card: #fffefa; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      main { width: min(100% - 32px, 780px); margin: 48px auto; padding: clamp(24px, 6vw, 56px); background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+      .eyebrow { color: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 8px 0 10px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.12; letter-spacing: -.04em; }
+      h2 { margin: 34px 0 8px; font-size: 1.2rem; line-height: 1.3; }
+      p, ul { margin: 10px 0; }
+      ul { padding-left: 24px; }
+      a { color: var(--accent); text-underline-offset: 3px; }
+      .updated, .muted { color: var(--muted); }
+      .note { margin-top: 28px; padding: 16px 18px; border-left: 3px solid var(--accent); background: #f2f4ec; }
+      footer { margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+      @media (max-width: 520px) { main { margin: 16px auto; border-radius: 10px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow"><a href="./">Librus powiadomienia</a></p>
+      <h1>Polityka prywatności</h1>
+      <p class="updated">Ostatnia aktualizacja: 9 października 2026 r.</p>
+
+      <p>Ta informacja opisuje prywatną integrację, która powiadamia o nowych wiadomościach w Librus Synergia. Integracja jest przeznaczona do użytku osobistego.</p>
+
+      <h2>Administrator i kontakt</h2>
+      <p>Administratorem danych przetwarzanych przez tę integrację jest Paweł Jędrzejewski. W sprawach dotyczących danych można napisać na adres <a href="mailto:paweljedrzejewski88@gmail.com">paweljedrzejewski88@gmail.com</a>.</p>
+
+      <h2>Jakie dane są przetwarzane</h2>
+      <ul>
+        <li><strong>Gmail:</strong> integracja sprawdza tematy nowych wiadomości i identyfikatory techniczne potrzebne do wykrywania zdarzeń oraz zapobiegania duplikatom. Nie pobiera treści wiadomości Gmail ani ich załączników.</li>
+        <li><strong>Librus Synergia:</strong> gdy temat wiadomości Gmail zawiera „LIBRUS Synergia”, integracja pobiera najnowszą wiadomość ze skrzynki Librusa: nadawcę, temat, datę, treść i informacje o załącznikach. Załączniki są pobierane, jeśli występują.</li>
+        <li><strong>Dane techniczne:</strong> adres konta Gmail oraz stan obserwowania skrzynki i dostarczenia powiadomień.</li>
+      </ul>
+
+      <h2>Cel i odbiorcy danych</h2>
+      <p>Dane są używane wyłącznie do wykrycia powiadomienia o wiadomości z Librusa i dostarczenia jej do skonfigurowanego prywatnego czatu Telegram. Treść wiadomości Librusa i jej załączniki są przekazywane do Telegrama, który przetwarza je zgodnie ze swoją <a href="https://telegram.org/privacy">polityką prywatności</a>.</p>
+      <p>Do obsługi integracji używane są Gmail i Pub/Sub, Cloud Run, Cloud Storage oraz Secret Manager Google Cloud, a także Librus Synergia i biblioteka <code>librus_pyapi</code>. Dane logowania do Librusa, tokeny i ustawienia integracji są przechowywane w Google Secret Manager.</p>
+
+      <h2>Przechowywanie danych</h2>
+      <p>Stan techniczny powiadomień oraz kopia ostatnio pobranej wiadomości Librusa są przechowywane w prywatnym zasobniku Google Cloud Storage w regionie Stanów Zjednoczonych. Kopia wiadomości jest zastępowana przy obsłudze kolejnego pasującego powiadomienia. Dane techniczne zapobiegające ponownemu wysłaniu tego samego powiadomienia nie mają skonfigurowanego automatycznego terminu usunięcia. Dane pozostają w zasobniku, dopóki nie zostaną usunięte ręcznie lub razem z zasobami integracji.</p>
+
+      <h2>Bezpieczeństwo i kontrola</h2>
+      <p>Usługa przetwarza dane w Google Cloud, a dostęp do jej endpointów jest chroniony tokenem. Dostęp integracji do Gmaila można cofnąć w ustawieniach konta Google. Można też zatrzymać powiadomienia przez zablokowanie bota lub usunięcie prywatnego czatu Telegram.</p>
+
+      <h2>Ta strona</h2>
+      <p>Strona jest hostowana przez GitHub Pages. GitHub może przetwarzać techniczne dane połączenia odwiedzających zgodnie ze swoją <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">informacją o prywatności</a>. Strona nie używa własnych plików cookie ani narzędzi analitycznych.</p>
+
+      <div class="note"><strong>Ważne:</strong> Gmail służy do sprawdzenia tematu powiadomienia. Treść wiadomości i załączniki pochodzą z Librus Synergia i są wysyłane do prywatnego czatu Telegram.</div>
+      <footer>W sprawach dotyczących tej integracji: <a href="mailto:paweljedrzejewski88@gmail.com">paweljedrzejewski88@gmail.com</a>.</footer>
+    </main>
+  </body>
+</html>
