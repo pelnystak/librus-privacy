@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Prywatna integracja wysyłająca powiadomienia o nowych wiadomościach Librus Synergia do Telegrama." />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>Librus powiadomienia</title>
+    <style>
+      :root { color-scheme: light; --ink: #252b27; --muted: #5c665f; --line: #d9ded7; --accent: #526d42; --paper: #f5f3ed; --card: #fffefa; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      main { width: min(100% - 32px, 780px); margin: 48px auto; padding: clamp(24px, 6vw, 56px); background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+      .eyebrow { color: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 8px 0 10px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.12; letter-spacing: -.04em; }
+      .note { margin-top: 28px; padding: 16px 18px; border-left: 3px solid var(--accent); background: #f2f4ec; }
+      a { color: var(--accent); text-underline-offset: 3px; }
+      .button { display: inline-block; margin-top: 12px; padding: 11px 17px; border-radius: 7px; background: var(--accent); color: white; font-weight: 650; text-decoration: none; }
+      @media (max-width: 520px) { main { margin: 16px auto; border-radius: 10px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Prywatna integracja</p>
+      <h1>Librus powiadomienia</h1>
+      <p>Ta osobista automatyzacja wykrywa e-mail o nowej wiadomości w Librus Synergia i wysyła najnowszą wiadomość Librusa — wraz z załącznikami, jeśli występują — do skonfigurowanego prywatnego czatu Telegram.</p>
+      <div class="note"><strong>Jak działa:</strong> Gmail sprawdza tematy nowych wiadomości. Nie pobiera treści ani załączników e-mail. Właściwa treść i pliki są pobierane z Librus Synergia.</div>
+      <a class="button" href="privacy.html">Polityka prywatności</a>
+    </main>
+  </body>
+</html>
